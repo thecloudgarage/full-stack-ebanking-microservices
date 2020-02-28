@@ -35,8 +35,31 @@ ng --version
 * The maven docker plugin and along with maven wrapper enables us to create the jar and also the docker image for it
 * To build the docker image run
 ```
-./mvnw build 
+./mvnw install dockerfile:build -DskipTests
+```
+* In case you want to only create a jar file
+```
+./mvnw clean install -DskipTests
+```
+* Once the docker image is built, tag it for your repository and push it
+* In such a case, also alter the image names in the YAML files
 
+## NOTE for frontend ebanking docker image
+* The frontend ebanking will be running on nginx
+* For the frontend ebanking docker image, we have first do a ng build
+* This will create the artefacts in the dist directory
+* The dockerfile already has instructions to copy the dist artefacts
+* Also note, the account service routes all /api calls to localhost
+* When these /api calls are done to the localhost, our frontend.conf for the nginx has an entry to route it to the gateway service
+* As such the frontend.conf is already configured to route /api to an upstream definition for gateway-service on a nodeport
+* If you want to alter it, do so appropriately
+* In a nutshell, to build the docker image for 
+```
+ng build
+./mvnw install dockerfile:build -DskipTests
+```
+
+# Continued
 
 Example project showcasing:
 
