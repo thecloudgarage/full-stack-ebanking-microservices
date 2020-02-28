@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: card-service
-          image: "achalise/card-service:0.0.1"
+          image: "thecloudgarage/card-service:0.0.1"
           ports:
           - containerPort: 8080
           env:
