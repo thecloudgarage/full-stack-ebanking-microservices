@@ -1,5 +1,8 @@
 # online banking example
 
+* Install nodejs on ubuntu 18.04
+* Install docker on ubuntu 18.04
+
 Example project showcasing:
 
 * SpringBoot microservices with reactive streams
