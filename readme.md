@@ -29,6 +29,14 @@ ng --version
 ```
 * Now the node is upgraded to latest (as of writing 13.x) and the angular/cli is also installed
 
+## Dockerization
+* The docker images are already present on my dockerhub thecloudgarage and are respectively referenced in the k8s yaml templates
+* However, in case we want to build these docker images again, then each of the service directory contains a dockerfile
+* The maven docker plugin and along with maven wrapper enables us to create the jar and also the docker image for it
+* To build the docker image run
+```
+./mvnw build 
+
 
 Example project showcasing:
 
