@@ -1,6 +1,16 @@
 # online banking example
 
 * Install nodejs on ubuntu 18.04
+
+```
+sudo su
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install 8.9
+node -e "console.log('Running Node.js ' + process.version)"
+```
+
+* c
 * Install docker on ubuntu 18.04
 
 Example project showcasing:
