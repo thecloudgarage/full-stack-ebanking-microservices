@@ -1,9 +1,14 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: card-service
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: card-service
+      tier: backend
+      track: stable
   template:
     metadata:
       labels:
