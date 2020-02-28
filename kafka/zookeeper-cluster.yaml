@@ -30,7 +30,7 @@ spec:
           value: zoo3
 ---
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: zookeeper-deployment-2
 spec:
@@ -61,7 +61,7 @@ spec:
           value: zoo3
 ---
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: zookeeper-deployment-3
 spec:
