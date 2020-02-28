@@ -1,7 +1,7 @@
 # online banking example
 
 * Install nodejs on ubuntu 18.04
-
+* The below will install 8.x version of nodejs (as the node modules used in the code require the same)
 ```
 sudo su
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
@@ -9,9 +9,26 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | b
 nvm install 8.9
 node -e "console.log('Running Node.js ' + process.version)"
 ```
-
-* c
 * Install docker on ubuntu 18.04
+```
+sudo su
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+apt-get update
+apt-get install -y docker-ce
+sudo usermod -aG docker ubuntu
+```
+* Clone this git repo and cd into frontend/ebanking and run npm install
+* At this stage, we have node 8.x running, however installation of angular-cli needs node 10.x or above
+* Once done run the below command it will upgrade node js to the latest version...
+```
+nvm install node --reinstall-packages-from=node
+npm update
+npm install -g @angular/cli --unsafe-perm=true
+ng --version
+```
+* Now the node is upgraded to latest (as of writing 13.x) and the angular/cli is also installed
+
 
 Example project showcasing:
 
